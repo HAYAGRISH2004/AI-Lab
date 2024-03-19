@@ -1,0 +1,17 @@
+
+bird(sparrow).
+bird(eagle).
+bird(duck).
+bird(crow).
+bird(ostrich). % Note: Ostrich is a bird that cannot fly.
+bird(puffin).
+bird(swan).
+bird(albatross).
+bird(starling).
+bird(owl).
+bird(kingfisher).
+bird(thrush).
+
+can_fly(X) :- bird(X), \+ bird_that_cannot_fly(X).
+
+bird_that_cannot_fly(ostrich).
